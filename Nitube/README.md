@@ -8,9 +8,11 @@
 
 ## メモ
 
+* 関数等の設計書に関しては同フォルダのPDFファイルを参照．
+
 ## 簡易仕様、設計書
 
-    ![siyo01](./pic/Nitube仕様.png "siyo01")
+![siyo01](./pic/Nitube仕様.png "siyo01")
 
 
-    ![siyo02](./pic/Nitube仕様2.png "siyo02")
+![siyo02](./pic/Nitube仕様2.png "siyo02")
