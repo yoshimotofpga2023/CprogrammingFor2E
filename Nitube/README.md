@@ -10,3 +10,7 @@
 
 ## 簡易仕様、設計書
 
+    ![siyo01](./pic/Nitube仕様.png "siyo01")
+
+
+    ![siyo02](./pic/Nitube仕様2.png "siyo02")
