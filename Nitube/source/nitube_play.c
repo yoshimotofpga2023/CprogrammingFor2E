@@ -11,6 +11,7 @@ void nitube_play( struct NITUBE *pt_nitube )
     {
         case 1:
             nitube_makebuffer_mylist( pt_nitube );
+            printf("play mylist\n");
             nitube_playing( pt_nitube, 1);
             break;
 
@@ -149,11 +150,11 @@ void nitube_makebuffer_mylist( struct NITUBE *pt_nitube )
 
     index = pt_nitube->mylist1.start;
     number = pt_nitube->mylist1.max;
+    printf("%d\n", number);
 
     for ( i = 0; i < number; i++ )
     {
         index = index->next;
-        printf("%s \n", index->title);
         pt_nitube->playbuffer.list[i] = index->mylistlink;
     }
 
@@ -168,8 +169,9 @@ void nitube_playing( struct NITUBE *pt_nitube, int type)
     struct MOVIE *index;
 
     index = pt_nitube->playbuffer.list[0];
-    cmd = 1;
     i = 0;
+
+    cmd = 1;
 
     while ( cmd != 0 )
     {
@@ -196,7 +198,7 @@ void nitube_playing( struct NITUBE *pt_nitube, int type)
             if ( i >= pt_nitube->playbuffer.max )
             {
                 cmd = 0;
-                printf("動画が存在しません。終了します \n");
+                printf("動画が存在しません。終了します\n");
             }
         }
     }

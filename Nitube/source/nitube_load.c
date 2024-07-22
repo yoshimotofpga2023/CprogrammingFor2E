@@ -97,6 +97,16 @@ void nitube_load_mylist( struct NITUBE *pt_nitube )
         index = pnew;
     }
     fclose(fp);
+
+
+    index = pt_nitube->mylist1.start;
+    for (i = 0; i < number; i++)
+    {
+        index = index->next;
+        printf("%s \n", index->mylistlink->channel);
+    }
+
+    pt_nitube->mylist1.max = number;
     printf("\n %d 件のマイリスト %s を読み込みました\n", number, pt_nitube->mylist1.name);
 
 
